@@ -5,23 +5,23 @@
 class Console < Formula
   desc ""
   homepage ""
-  version "1.10.1"
+  version "1.15.1"
 
   depends_on "helm"
   depends_on "kubernetes-cli"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/platformplane/console/releases/download/v1.10.1/console_1.10.1_darwin_arm64.tar.gz"
-      sha256 "35cf9f26d5f4e919624ba5f1d6c1a862fb386dd38285d872e5422e52d3dacb0c"
+      url "https://github.com/platformplane/console/releases/download/v1.15.1/console_1.15.1_darwin_arm64.tar.gz"
+      sha256 "1bdfb4348f882f3f523c84f8b4e8263caeff5a30f77b8ffeffc93b61836300f9"
 
       def install
         bin.install "console"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/platformplane/console/releases/download/v1.10.1/console_1.10.1_darwin_amd64.tar.gz"
-      sha256 "f70b9ea2c8b3b99dca0063794a1b0100090a0c06cf68909d51eb3fe5497ef3c8"
+      url "https://github.com/platformplane/console/releases/download/v1.15.1/console_1.15.1_darwin_amd64.tar.gz"
+      sha256 "1f2e8a46bc4a520593928a0ae6c552d16dcd7ae48bbfa752d82673dc7f5213fe"
 
       def install
         bin.install "console"
@@ -31,16 +31,16 @@ class Console < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/platformplane/console/releases/download/v1.10.1/console_1.10.1_linux_arm64.tar.gz"
-      sha256 "68b99590f5b2a4b4bedc2b4b4a4f0d893475d5bcf568705190d8a6a92f56efb2"
+      url "https://github.com/platformplane/console/releases/download/v1.15.1/console_1.15.1_linux_arm64.tar.gz"
+      sha256 "58e8e3949010815879a050ab5a5575bcf58f472c7f1720a42254b22169145386"
 
       def install
         bin.install "console"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/platformplane/console/releases/download/v1.10.1/console_1.10.1_linux_amd64.tar.gz"
-      sha256 "06eb247cc40efc9fe58f6b7abe25babd9ab6b0672629337cca219de1d723eed6"
+      url "https://github.com/platformplane/console/releases/download/v1.15.1/console_1.15.1_linux_amd64.tar.gz"
+      sha256 "4909b2d91ad0c7ef2a144a885fb0f6c33d0279ae9ec8b3344231d8c6134c2a97"
 
       def install
         bin.install "console"
