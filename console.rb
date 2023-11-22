@@ -13,7 +13,7 @@ class Console < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/platformplane/console/releases/download/v1.18.4/console_1.18.4_darwin_arm64.tar.gz"
-      sha256 "fef5672dddd15b3a69a8f8820ab8eb78554ad71db2b38bdaa0b267bd36c18a8e"
+      sha256 "ea1edc12b41e4007fe879c3ea760c9442c1cacb2a589bbf135c3bf4dd50264f1"
 
       def install
         bin.install "console"
@@ -21,7 +21,7 @@ class Console < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/platformplane/console/releases/download/v1.18.4/console_1.18.4_darwin_amd64.tar.gz"
-      sha256 "43cd129a3112f81d0191eff1fcd838ab4bc78500e264b2a8874a776e1505ee1e"
+      sha256 "6148cc5c3d6ec5b378e19aa051410990740a173d65ef4c8bf0711cd51c03c488"
 
       def install
         bin.install "console"
@@ -32,7 +32,7 @@ class Console < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/platformplane/console/releases/download/v1.18.4/console_1.18.4_linux_arm64.tar.gz"
-      sha256 "651cd198920ab9245e50d6211229eeb4427747cc4e464caa4823776de3068b35"
+      sha256 "10110bec5afecfb19b96c3b933ddaadfe3905197bd987bc30530c67aa48c4ab2"
 
       def install
         bin.install "console"
@@ -40,7 +40,7 @@ class Console < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/platformplane/console/releases/download/v1.18.4/console_1.18.4_linux_amd64.tar.gz"
-      sha256 "bc236cc1d05660db95f6e7e636ad2050154a703b26199933934bc227c2cd5a00"
+      sha256 "fa7e2b163d9e482aa7f71d77b183e6d2dc58f512138d40ed9b1927dcd32c62d3"
 
       def install
         bin.install "console"
