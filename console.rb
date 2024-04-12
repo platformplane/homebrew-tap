@@ -5,23 +5,23 @@
 class Console < Formula
   desc ""
   homepage ""
-  version "1.21.6"
+  version "1.23.0"
 
   depends_on "helm"
   depends_on "kubernetes-cli"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/platformplane/console/releases/download/v1.21.6/console_1.21.6_darwin_arm64.tar.gz"
-      sha256 "cdad40fa426e6bf4571da3b37636954f645b5ba1f0d545522689b334e4bfc418"
+    if Hardware::CPU.intel?
+      url "https://github.com/platformplane/console/releases/download/v1.23.0/console_1.23.0_darwin_amd64.tar.gz"
+      sha256 "e7c998e75c5d8365a510445dd21011259ef9cbdffbe24098e1445e53cf42d6ea"
 
       def install
         bin.install "console"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/platformplane/console/releases/download/v1.21.6/console_1.21.6_darwin_amd64.tar.gz"
-      sha256 "caeb4e460c560512ecbd908443ac6974b4b0e04f62729e44e1b29e87440797e0"
+    if Hardware::CPU.arm?
+      url "https://github.com/platformplane/console/releases/download/v1.23.0/console_1.23.0_darwin_arm64.tar.gz"
+      sha256 "cc20c69ef517c8c2bef961aea42153d8ea96429f184faf4a129d436571977734"
 
       def install
         bin.install "console"
@@ -30,17 +30,17 @@ class Console < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/platformplane/console/releases/download/v1.21.6/console_1.21.6_linux_arm64.tar.gz"
-      sha256 "a802f22589e751878fa642661cfefb05b37e81eb7ef60772068bdf565283f45e"
+    if Hardware::CPU.intel?
+      url "https://github.com/platformplane/console/releases/download/v1.23.0/console_1.23.0_linux_amd64.tar.gz"
+      sha256 "66826b3f2178369ecaf09239cbb276a2da638feafecaae6fa30a774b114ef078"
 
       def install
         bin.install "console"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/platformplane/console/releases/download/v1.21.6/console_1.21.6_linux_amd64.tar.gz"
-      sha256 "12b184e478626135afbba84141064d0765e92c52acb85836dd30125ac10414bf"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/platformplane/console/releases/download/v1.23.0/console_1.23.0_linux_arm64.tar.gz"
+      sha256 "d03ee13dadbb30c7ea198f06f230f1ff4af07e7e851c3cd7548d4c573d0ffffb"
 
       def install
         bin.install "console"
