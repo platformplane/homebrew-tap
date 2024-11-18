@@ -5,23 +5,23 @@
 class Console < Formula
   desc ""
   homepage ""
-  version "1.29.1"
+  version "1.33.1"
 
   depends_on "helm"
   depends_on "kubernetes-cli"
 
   on_macos do
     on_intel do
-      url "https://github.com/platformplane/console/releases/download/v1.29.1/console_1.29.1_darwin_amd64.tar.gz"
-      sha256 "be01fd622d1484ee22298dcb6aad0aacec9fe1295367c78912f80152be21e9f4"
+      url "https://github.com/platformplane/console/releases/download/v1.33.1/console_1.33.1_darwin_amd64.tar.gz"
+      sha256 "8cf7c7963a36e2a97954ac185cc43cbc496158519852c0c706e21d3a59609143"
 
       def install
         bin.install "console"
       end
     end
     on_arm do
-      url "https://github.com/platformplane/console/releases/download/v1.29.1/console_1.29.1_darwin_arm64.tar.gz"
-      sha256 "e2d4946f236f535d7eda0be31f3232341e67c2bc343a2011248ebecba56c4d1b"
+      url "https://github.com/platformplane/console/releases/download/v1.33.1/console_1.33.1_darwin_arm64.tar.gz"
+      sha256 "d956b9bcae51d31009973e3f1588042fc8cb4bbb589fb8f839b41a217bda658e"
 
       def install
         bin.install "console"
@@ -32,8 +32,8 @@ class Console < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/platformplane/console/releases/download/v1.29.1/console_1.29.1_linux_amd64.tar.gz"
-        sha256 "0b1227ef072ee66d6f885cc74f5d833eeac7c211688ad46cb8727ccbd69a6e24"
+        url "https://github.com/platformplane/console/releases/download/v1.33.1/console_1.33.1_linux_amd64.tar.gz"
+        sha256 "943c764132dcba4454e81da4ad66dec7a226be7cbe302667b5e4bf3863c7cdc6"
 
         def install
           bin.install "console"
@@ -42,8 +42,8 @@ class Console < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/platformplane/console/releases/download/v1.29.1/console_1.29.1_linux_arm64.tar.gz"
-        sha256 "c52d4033ba7681eb486be685e87b0f85f0fd77960508d980f9e81debed026af0"
+        url "https://github.com/platformplane/console/releases/download/v1.33.1/console_1.33.1_linux_arm64.tar.gz"
+        sha256 "b7f99a2d9d9db6fcfbe17c878a3806e0b579132a4fcb66c2d09281208fe77583"
 
         def install
           bin.install "console"
