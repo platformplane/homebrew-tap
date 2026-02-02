@@ -5,23 +5,24 @@
 class Console < Formula
   desc ""
   homepage ""
-  version "2.1.0"
+  version "2.2.0"
 
   depends_on "helm"
   depends_on "kubernetes-cli"
+  depends_on "vmware/pinniped/pinniped-cli"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/platformplane/console/releases/download/v2.1.0/console_2.1.0_darwin_amd64.tar.gz"
-      sha256 "6a59140e8e5ac718ce14135a53c38528264380e197ed28cc20e859b03ba1fe81"
+      url "https://github.com/platformplane/console/releases/download/v2.2.0/console_2.2.0_darwin_amd64.tar.gz"
+      sha256 "a2fbac464a6bd98268b6b0797207725403912716291f6fdb1399fe20d4472409"
 
       def install
         bin.install "console"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/platformplane/console/releases/download/v2.1.0/console_2.1.0_darwin_arm64.tar.gz"
-      sha256 "94c577c80327bc2dce3d76557c774c0c091b0d965a8b9d24f672c51f07f6b213"
+      url "https://github.com/platformplane/console/releases/download/v2.2.0/console_2.2.0_darwin_arm64.tar.gz"
+      sha256 "6de4851dc474498947d1c60ccf2821b6344968e7865f51e82ea871b3a9ee1758"
 
       def install
         bin.install "console"
@@ -31,15 +32,15 @@ class Console < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/platformplane/console/releases/download/v2.1.0/console_2.1.0_linux_amd64.tar.gz"
-      sha256 "d64c32c54149e75cfd5232ed416d2639071e5f5d86fccb45565224ababebf2c7"
+      url "https://github.com/platformplane/console/releases/download/v2.2.0/console_2.2.0_linux_amd64.tar.gz"
+      sha256 "e5e75a91a8a536b6bf5900f49363a288854ab23a17ca670273ee07039ffe284e"
       def install
         bin.install "console"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/platformplane/console/releases/download/v2.1.0/console_2.1.0_linux_arm64.tar.gz"
-      sha256 "75eaffc7b2179f1743fc880b7cb8a30b75a0da319ab566e394a76e429db63bb8"
+      url "https://github.com/platformplane/console/releases/download/v2.2.0/console_2.2.0_linux_arm64.tar.gz"
+      sha256 "3d95a33590b4e487d58dfc576b59e8cff2dc727086da2dea9d14fbfda8b5f1cb"
       def install
         bin.install "console"
       end
